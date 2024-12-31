@@ -6,7 +6,7 @@ MONGO_DATABASE_NAME = "Phising_classifier_2"
 
 MONGO_COLLECTION_NAME = "Phishing"
 
-TARGET_COLUMN = "Result"
+TARGET_COLUMN = "Prediction"
 
 MONGO_DB_URL = "mongodb+srv://Govindkv:<Password>@phishing.hbsdoeq.mongodb.net/?retryWrites=true&w=majority&appName=phishing"
 
