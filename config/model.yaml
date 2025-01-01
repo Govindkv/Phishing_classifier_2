@@ -1,0 +1,83 @@
+model_selection:
+  model:
+    LogisticRegression:
+      search_param_grid:
+        penalty:
+          - l1
+          - l2
+        solver:
+          - liblinear
+          - saga
+        C:
+          - 0.01
+          - 0.1
+          - 1
+          - 10
+
+    SVC:
+      search_param_grid:
+        C:
+          - 0.1
+          - 1
+          - 10
+        kernel:
+          - linear
+          - rbf
+          - poly
+        gamma:
+          - 0.1
+          - 0.01
+          - 0.001
+
+    DecisionTreeClassifier:
+      search_param_grid:
+        criterion:
+          - gini
+          - entropy
+        max_depth:
+          - None
+          - 5
+          - 10
+          - 20
+        min_samples_split:
+          - 2
+          - 5
+          - 10
+        min_samples_leaf:
+          - 1
+          - 2
+          - 4
+
+    KNeighborsClassifier:
+      search_param_grid:
+        n_neighbors:
+          - 3
+          - 5
+          - 7
+          - 10
+        weights:
+          - uniform
+          - distance
+        metric:
+          - euclidean
+          - manhattan
+          - minkowski
+
+    RandomForestClassifier:
+      search_param_grid:
+        n_estimators:
+          - 100
+          - 200
+          - 300
+        max_depth:
+          - None
+          - 5
+          - 10
+        min_samples_split:
+          - 2
+          - 5
+          - 10
+        min_samples_leaf:
+          - 1
+          - 2
+          - 4
