@@ -128,7 +128,7 @@ For a detailed description, refer to the [Dataset Documentation](#).
 ## Visual Overview
 
 ### Data Pipeline
-```
+```mermaid
 graph TD
     A[Raw Data] --> B[Data Ingestion]
     B --> C[Data Transformation]
