@@ -60,7 +60,7 @@ class DataTransformation:
 
             X = dataframe.drop(columns=TARGET_COLUMN)
 
-            y = np.where(dataframe[TARGET_COLUMN]==-1,1)
+            y = np.where(dataframe[TARGET_COLUMN]==-1,0,1)
 
             X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2)
 

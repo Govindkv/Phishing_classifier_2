@@ -8,7 +8,7 @@ import boto3
 
 from src.Phishing_classifier_2.constant import *
 from src.Phishing_classifier_2.logger import logging
-from src.Phishing_classifier_2.exception import CustumException
+from src.Phishing_classifier_2.exception import CustomException
 
 
 class MainUtils:

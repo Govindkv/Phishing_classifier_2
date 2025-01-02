@@ -8,7 +8,7 @@ MONGO_COLLECTION_NAME = "Phishing"
 
 TARGET_COLUMN = "Prediction"
 
-MONGO_DB_URL = "mongodb+srv://Govindkv:<Password>@phishing.hbsdoeq.mongodb.net/?retryWrites=true&w=majority&appName=phishing"
+MONGO_DB_URL = "mongodb+srv://Govindkv:x5ND-gjwgUef9p9@phishing.hbsdoeq.mongodb.net/?retryWrites=true&w=majority&appName=phishing"
 
 MODEL_FILE_NAME = "model"
 

@@ -51,7 +51,7 @@ class ModelTrainer:
             report = {}            
 
             for i in range(len(list(models))):
-                model = list(model.values())[i]
+                model = list(models.values())[i]
 
                 model.fit(X_train, y_train) # Train model
 
@@ -138,7 +138,7 @@ class ModelTrainer:
 
             logging.info(f"Extracting model config path")
 
-            model_report: dict = self.evaluate_models(X=x_train, y=y_train, model = self.models)
+            model_report: dict = self.evaluate_models(X=x_train, y=y_train, models = self.models)
 
             ## To get best model score from dict
             best_model_score = max(sorted(model_report.values()))

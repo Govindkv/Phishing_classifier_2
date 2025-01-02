@@ -17,7 +17,7 @@ class PredictionPipelineConfig:
     prediction_file_name:str = "prediction_file.csv"
     model_file_path: str = os.path.join(artifact_folder, "model.pkl")
     preprocessor_path:str = os.path.join(artifact_folder, "preprocessor.pkl")
-    prediction_file_path:str = os.path.joint(prediction_output_dirname, prediction_file_name)
+    prediction_file_path:str = os.path.join(prediction_output_dirname, prediction_file_name)
 
 class PredictionPipeline:
     def __init__(self, request:request):
@@ -66,7 +66,7 @@ class PredictionPipeline:
 
             input_dataframe[prediction_column_name] = [pred for pred in predictions]
 
-            target_column_mapping = {-1: "Phishing", 1: "Legitimate"}
+            target_column_mapping = {0: "Phishing", 1: "Legitimate"}
 
             input_dataframe[prediction_column_name] = input_dataframe[prediction_column_name].map(target_column_mapping)
 
